@@ -7,6 +7,7 @@ import {
 import Home from "./components/Home";
 import About from "./components/About";
 import RootLayout from "./components/layouts/RootLayout";
+import Error from "./components/layouts/Error";
 
 function App() {
   const router = createBrowserRouter(
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
         </Route>
+        <Route path="*" element={<Error/>}/>
       </>,
     ),
   );
